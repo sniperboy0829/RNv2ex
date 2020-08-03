@@ -1,2 +1,2 @@
-# RXv2ex
+# RNv2ex
 v2ex client implemented with ReactNative
