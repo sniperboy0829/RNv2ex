@@ -26,11 +26,7 @@ function HomeStackScreen() {
         headerBackTitle: null,
         headerTruncatedBackTitle: null,
       }}>
-      <HomeStack.Screen
-        name="Home"
-        component={Home}
-        options={{title: 'TopTopics'}}
-      />
+      <HomeStack.Screen name="Home" component={Home} />
       <HomeStack.Screen name="Detail" component={Detail} />
     </HomeStack.Navigator>
   );

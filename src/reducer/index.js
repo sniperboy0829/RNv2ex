@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
-import topTopics from './TopTopics';
+import TopTopics from './TopTopics';
+import LatestTopics from './LatestTopics';
 
 export default combineReducers({
-  topTopics,
+  topTopics: TopTopics,
+  latestTopics: LatestTopics,
 });

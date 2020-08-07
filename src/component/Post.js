@@ -29,6 +29,11 @@ const styles = StyleSheet.create({
   },
 });
 
+function time(ts) {
+  var date = new Date(ts * 1000 + 8 * 3600 * 1000);
+  return date.toJSON().substr(0, 19).replace('T', ' ');
+}
+
 export function Post({post, onClick}) {
   const avatarURL = post.member.avatar_mini;
   let actuallyAvatarURL = avatarURL;
@@ -36,7 +41,7 @@ export function Post({post, onClick}) {
   if (indexAvatarURL !== -1) {
     actuallyAvatarURL = avatarURL.substring(0, indexAvatarURL);
   }
-  let signature = post.member.username + '    5分钟前';
+  let signature = post.member.username + '    ' + time(post.last_modified);
   return (
     <TouchableOpacity style={styles.container} onPress={() => onClick(post.id)}>
       <Image style={styles.avtar} source={{uri: actuallyAvatarURL}} />
