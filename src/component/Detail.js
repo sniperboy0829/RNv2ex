@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, View, ScrollView} from 'react-native';
+import {Text, StyleSheet, ScrollView} from 'react-native';
 import {connect} from 'react-redux';
 
 const styles = StyleSheet.create({

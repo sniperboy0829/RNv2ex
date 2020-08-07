@@ -1,11 +1,11 @@
 import React from 'react';
 import Feed from './Feed';
 import {connect} from 'react-redux';
-import {View, Text} from 'react-native';
+import {LATEST_TOPICS_LOADED} from '../Actions/actionTypes';
 
 const mapDispatchtoProps = (dispatch) => ({
   onLoad: (payload) => {
-    dispatch({type: 'LatestTopics', payload: payload});
+    dispatch({type: LATEST_TOPICS_LOADED, payload: payload});
   },
 });
 
@@ -19,9 +19,6 @@ class LatestTopics extends React.Component {
       console.log('start latestTopics request');
       let response = await fetch('https://www.v2ex.com/api/topics/latest.json');
       let json = await response.json();
-      await json.map((item) => {
-        console.log(item.id);
-      });
       this.props.onLoad(json);
     } catch (error) {
       console.error(error);
@@ -34,7 +31,9 @@ class LatestTopics extends React.Component {
   }
 
   render() {
-    return <Feed />;
+    return (
+      <Feed selectedTab="latestTopics" navigation={this.props.navigation} />
+    );
   }
 }
 

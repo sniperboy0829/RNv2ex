@@ -13,8 +13,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <ScrollableTabView>
-        <TopTopics tabLabel="TopTopics" navigation={this.props.navigation} />
+      <ScrollableTabView
+        onChangeTab={(obj) => {
+          console.log('selected index: ' + obj.i);
+        }}>
+        <TopTopics tabLabel="HotTopics" navigation={this.props.navigation} />
         <LatestTopics
           tabLabel="LatestTopics"
           navigation={this.props.navigation}

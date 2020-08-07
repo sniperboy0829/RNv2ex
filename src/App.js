@@ -27,7 +27,11 @@ function HomeStackScreen() {
         headerTruncatedBackTitle: null,
       }}>
       <HomeStack.Screen name="Home" component={Home} />
-      <HomeStack.Screen name="Detail" component={Detail} />
+      <HomeStack.Screen
+        name="Detail"
+        component={Detail}
+        options={({route}) => ({title: route.params.title})}
+      />
     </HomeStack.Navigator>
   );
 }

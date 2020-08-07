@@ -1,7 +1,8 @@
+import {HOT_TOPICS_LOADED} from '../Actions/actionTypes';
+
 export default (state = [], action) => {
-  console.log('toptopics reducer, action type:' + action.type);
   switch (action.type) {
-    case 'POSTS_LOAD':
+    case HOT_TOPICS_LOADED:
       return [].concat(action.payload);
     default:
       return state;
