@@ -20,7 +20,5 @@ make sure [install ReactNative](https://reactnative.dev/docs/environment-setup) 
 ## Screenshots
 
 ![hotTopics](https://github.com/LittleMcDullDaddy/RNv2ex/raw/master/screenshots/hotTopics.png)
-
 ![latestTopics](https://github.com/LittleMcDullDaddy/RNv2ex/raw/master/screenshots/latestTopics.png)
-
 ![detail](https://github.com/LittleMcDullDaddy/RNv2ex/raw/master/screenshots/detail.png)
