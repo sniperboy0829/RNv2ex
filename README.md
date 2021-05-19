@@ -5,7 +5,7 @@ This  is  a v2ex client demo implemented with ReactNative
 
 make sure [install ReactNative](https://reactnative.dev/docs/environment-setup) successfully 
 
-1. clone this repo ` git clone https://github.com/LittleMcDullDaddy/RNv2ex.git `
+1. clone this repo
 2. install all the dependency packages ` yarn install or npm install`
 3. if you want to run this app on iOS, go to the ios directory and run `pod instal `
 
